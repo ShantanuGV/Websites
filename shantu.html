@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHANTANU GOPAL VISPUTE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+			background-image: url('101692.jpg');
+			background-size: cover; /* ✅ Cover the entire page */
+			background-position: center; /* ✅ Center the image */
+			background-repeat: no-repeat; /* ✅ Prevent tiling */
+			background-attachment: fixed;
+			overflow-x: hidden;
+			overflow-y: scroll; /* Allows scrolling */
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			overflow-x: hidden;
+        }
+		
+		.da{
+			width:100%;
+			height:auto;
+			background: transparent;
+		}
+		
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+			color: white;
+			text-shadow: 0 0 10px black;
+        }
+		
+		.container-m {
+            width: 100%;
+			display: flex;
+			gap: 15%;
+        }
+		
+		.box-container {
+            margin: 20px 0;
+            padding: 20px;
+            background: transparent;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			overflow-x: hidden;
+			gap: 20px;
+			scroll-behavior: smooth;
+			scroll-snap-type: x mandatory;
+		}
+		
+		.box {
+			height: 200px;
+			aspect-ratio: 5/3;
+			margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+			align-items: center;
+			justify-content: space-around;
+            box-shadow: 0px 0px 10px #fff;
+			scroll-snap-align: center;
+			
+		}
+		
+		.box img {
+            height: 100%;
+			aspect-ratio: 5/3;
+            border-radius: 5px;
+			overflow-x: hidden;
+			overflow: hidden;
+			object-fit: fill;
+        }
+		
+		.box2 {
+			height: 200px;
+			aspect-ratio: 3/4;
+			margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+			align-items: center;
+			justify-content: space-around;
+            box-shadow: 0px 0px 10px #fff;
+			scroll-snap-align: center;
+			
+		}
+		
+		.box2 img {
+            height: 100%;
+			aspect-ratio: 3/4;
+            border-radius: 5px;
+			overflow-x: hidden;
+			overflow: hidden;
+			object-fit: fill;
+        }
+		
+        header {
+            background: #333;
+            position: relative;
+			width: 100vw;
+			height: 125px; /* Adjust height */
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			text-align: center;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			background-image: url('Untitled.png');
+			background-size: cover; /* ✅ Cover the entire page */
+			background-position: center; /* ✅ Center the image */
+			background-repeat: no-repeat;
+			text-shadow: 0 0 10px #333;
+        }
+		
+		header video{
+			position: absolute;
+			
+			min-width: 100vw;
+			height: auto;
+			z-index: 1;
+			object-fit: cover;
+		}
+		
+		header h1{
+		 z-index: 2;
+		}
+		
+		section {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+			backdrop-filter: blur(10px);
+            border-radius: 8px;
+			align-items: center;
+			justify-content: space-around;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+		
+        section-f {
+            margin: 20px 0;
+            padding: 20px;
+            background: transparent;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			overflow-x: auto;
+			gap: 20px;
+        }
+		.aside-r{
+			width: 25%;
+            aspect-ratio: 1/1;
+            background: white;
+            border-radius: 8px;
+			box-shadow: 0px 0px 10px #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+		}
+		
+		.aside-r img{
+			width: 100%;
+            aspect-ratio: 1/1;
+			border-radius: 8px;
+			object-fit: cover;
+			z-index: 1;
+			overflow: hidden;
+		}
+		
+		.aside-cvl{
+			width: 50%;
+            aspect-ratio: 4/3;
+            background: transparent;
+            border-radius: 8px;
+            align-items: center;
+            justify-content: center;
+		}
+		
+        footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+            
+            bottom: 0;
+            width: 100%;
+			background-image: url('Untitled.png');
+			background-size: cover; /* ✅ Cover the entire page */
+			background-position: center; /* ✅ Center the image */
+			background-repeat: no-repeat;
+        }
+		.aside-l{
+			width: 700px;
+            height: 250px;
+            background: transparent;
+            border-radius: 8px;
+            color: white;
+            align-items: center;
+            justify-content: center;
+			text-shadow: 0 0 10px black;
+			
+		}
+		
+		.aside-l h1{
+			color: black;
+			text-shadow: 0 0 10px white;
+		}
+		
+		.aside-cl{
+			width: 65%;
+            height: 250px;
+            background: white;
+            border-radius: 8px;
+            
+            align-items: center;
+            justify-content: center;
+			
+		}
+		
+		.black {
+			margin: 0;
+			padding: 0;
+			box-sizing;
+		}
+		.button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: #333;
+            color: white;
+            border-radius: 5px;
+        }
+		
+		.cv-container{
+            margin: 20px 0;
+            padding: 20px;
+			width: 45%;
+			aspect-ratio: 2/1;
+            background: rgba(255, 255, 255, 0.2);
+			backdrop-filter: blur(10px);
+			border-radius: 8px;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			gap: 0px;
+			color: white;
+			text-shadow: 0 0 10px black;
+			
+		}
+		
+		.cv-container h1{
+			color: black;
+			text-shadow: 0 0 10px white;
+		}
+		
+		.carousel {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            margin: 50px auto;
+            perspective: 1000px;
+			cursor: grab;
+			
+        }
+		
+        .carousel-inner {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+			margin: auto;
+			left: 25%;
+			right: 75%;
+            transform-style: preserve-3d;
+            transform: rotateY(0deg);
+            transition: transform 0.5s ease-in-out;
+			transform-origin: 30% center ;
+			
+        }
+        .carousel-item {
+            height: 100%;
+			aspect-ratio: 3/4;
+            position: absolute;
+            background: transparent;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-direction: column;
+			transform-origin: center ;
+			transform: translate(100%, 0%);
+			
+        }
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .carousel-item a {
+            margin-top: 10px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .carousel-item:nth-child(1) { transform: rotateY(0deg) translateZ(200px); }
+        .carousel-item:nth-child(2) { transform: rotateY(60deg) translateZ(200px); }
+        .carousel-item:nth-child(3) { transform: rotateY(120deg) translateZ(200px); }
+        .carousel-item:nth-child(4) { transform: rotateY(180deg) translateZ(200px); }
+        .carousel-item:nth-child(5) { transform: rotateY(240deg) translateZ(200px); }
+        .carousel-item:nth-child(6) { transform: rotateY(300deg) translateZ(200px); }
+		
+		.controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .control-area {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+		
+		.log{
+			height: 100px;
+			aspect-ratio: 1/1;
+			margin: 20px 0;
+            padding: 0px;
+            background: white;
+            border-radius: 50%;
+			align-items: center;
+			justify-content: space-around;
+            box-shadow: 0px 0px 10px #fff;
+			display: inline-block;
+			scroll-snap-align: start;
+		}
+		
+		.log img{
+			width: 100%;
+            aspect-ratio: 1/1;
+			border-radius: 8px;
+			object-fit: fill;
+			z-index: 1;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+		
+		.bp{
+			height: 50px;
+			width: 50px;
+			aspect-ratio: 1/1;
+            background: transparent;
+            border-radius: 50%;
+			align-items: center;
+			justify-content: space-around;
+			
+		}
+		.bp img{
+			height: 100%;
+			aspect-ratio: 1/1;
+            border-radius: 50%;
+			overflow-x: hidden;
+			overflow: hidden;
+			object-fit: fill;
+		}
+		
+    </style>
+	
+	<script>
+        function goLeft() {
+            document.querySelector('.box-container').scrollLeft -= 200;
+        }
+        function goRight() {
+            document.querySelector('.box-container').scrollLeft += 200;
+        }
+		
+		let angle = 0;
+		let isDragging = false;
+		let startX = 0;
+
+		function startDrag(event) {
+			isDragging = true;
+			startX = event.clientX || event.touches[0].clientX;
+			event.preventDefault(); // Prevent unwanted selection
+		}
+
+		function drag(event) {
+		if (!isDragging) return;
+		let currentX = event.clientX || event.touches[0].clientX;
+		let delta = startX - currentX;
+    
+		if (Math.abs(delta) > 5) {
+			angle += (delta > 0 ? -10 : 10);
+			document.querySelector('.carousel-inner').style.transform = `rotateY(${angle}deg)`;
+			startX = currentX;
+			}
+		}
+
+		function stopDrag() {
+			isDragging = false;
+		}
+		
+
+    </script>
+	
+</head>
+<body>
+    <header>
+		<video autoplay loop muted playsinline>
+        <source src="vecteezy_4k-3d-seamless-loop-of-traveling-to-glow-stars-filed-on_3706970.mov" type="video/mp4">
+		</video>
+        <h1>SHANTANU GOPAL VISPUTE</h1>
+    </header>
+    <div class="container">
+	<section id="about">
+		<h1>About Me</h1>
+        <section-f id="about">
+		
+		<div class="aside-l">
+            <p align="right"><h1 align="right">Hi, I'm Shantanu </h1></p>
+			<p align="right" >A Computer Engineering student passionate about coding and technology </p>
+			<p align="right" >Current Student of Guru Gobind Sing College of Engineering and Research Center</p>
+			<p align="right" >This is my Web-page</p>
+			<p align="right" >You can see my projects and download my CV</p>
+		</div>	
+		<div class="aside-r" align="right"><img src="06a2517a-fd58-4df4-9d1b-9ffed3cc857c.jpg" alt="C++"></div>
+        </section-f>
+		</section>
+        
+		<div class="da">
+        <ul id="skills" align-items="center">
+            <h1 align="center">Skills</h1>
+            <div class="carousel" onmousedown="startDrag(event)" onmousemove="drag(event)" onmouseup="stopDrag()" onmouseleave="stopDrag()" ontouchstart="startDrag(event)" ontouchmove="drag(event)" ontouchend="stopDrag()">
+                
+				<div class="carousel-inner">
+					
+					
+					<div class="carousel-item">
+                        <img src="Logo_C_sharp.svg.png" alt="E-commerce Website">
+                        <a href="https://myecommerce.com" target="_blank"></a>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="C++_logo.png" alt="C++">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="python.ico" alt="Web Development Portfolio">
+                        <a href="https://myportfolio.com" target="_blank"></a>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="react-logo-7B3CE81517-seeklogo.com.png" alt="Graphics.h Calculator">
+                        <a href="https://github.com/mycalculator" target="_blank"></a>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="HTML5_logo_and_wordmark.svg.png" alt="Machine Learning Model">
+                        <a href="https://github.com/mymodel" target="_blank"></a>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="java.png" alt="Mobile App Development">
+                        <a href="https://play.google.com/store/apps/mymobileapp" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+			<div>
+              
+            </div>
+        </ul>
+		</div>
+		
+		
+		<section id="projects">
+            <h1>Projects</h1>
+			
+            <ul>
+			<section-f id="sk">
+				<div class="bp"><img src="lb-Photoroom.png" onclick="goLeft()" ></img></div>
+				<div class="box-container">
+				<div class="box">
+				<a href="https://myportfolio.com" target="_blank">
+                    <img src="4591e45e-6c16-4732-80de-6651f489259e.jpg" alt="Web Development Portfolio">
+                </a>
+				</div>
+				<div class="box">
+				<a href="https://myportfolio.com" target="_blank">
+                    <img src="4591e45e-6c16-4732-80de-6651f489259e.jpg" alt="Graphics.h Calculator">
+                </a>
+				</div>
+				<div class="box">
+				<a href="https://myportfolio.com" target="_blank">
+                    <img src="4591e45e-6c16-4732-80de-6651f489259e.jpg" alt="Machine Learning Model">
+                </a>
+				</div>
+				<div class="box">
+				<a href="https://myportfolio.com" target="_blank">
+                    <img src="4591e45e-6c16-4732-80de-6651f489259e.jpg" alt="E-commerce Website">
+                </a>
+				</div>
+				<div class="box">
+				<a href="https://myportfolio.com" target="_blank">
+                    <img src="4591e45e-6c16-4732-80de-6651f489259e.jpg" alt="Mobile App Development">
+                </a>
+				</div>
+				<div class="box">
+				<a href="https://myportfolio.com" target="_blank">
+                    <img src="4591e45e-6c16-4732-80de-6651f489259e.jpg" alt="Portfolio">
+                </a>
+				</div>
+				<div class="box">
+				<a href="https://myportfolio.com" target="_blank">
+                    <img src="4591e45e-6c16-4732-80de-6651f489259e.jpg" alt="Portfolio">
+                </a>
+				</div>
+                </div>
+				<div class="bp"><img src="rb-Photoroom.png" width="50" height="50" onclick="goRight()"></img></div>
+				
+				
+			</section-f>	
+            </ul>
+        </section>
+		
+		
+		</div>
+		<div class="container-m">
+		
+		<div class="cv-container">
+		<div class="aside-cvl" >
+		<p align="right"><h1 align="right">This is My CV</h1></p>
+		<p align="right"><p align="right">You can Download it by cliking it</p></p>
+		</div>
+		<div class="box2">
+			<a href="DOC-20240921-WA0012_250217_202030.pdf" target="_blank" download="Shantanu_CV">
+				<img src="f2b218e6-60eb-4d6d-9aa2-616479d224a7.jpg" alt="CV-L">
+			</a>
+		</div>
+		</div>
+		
+		<div class="cv-container">
+		<div class="box2">
+			<a href="DOC-20240921-WA0012_250217_202030.pdf" target="_blank">
+				<img src="f2b218e6-60eb-4d6d-9aa2-616479d224a7.jpg" alt="CV-R">
+			</a>
+		</div>
+		<div class="aside-cvl">
+		<p align="left"><h1 align="left">This is My CV</h1></p>
+		<p align="left">You can Download it by cliking it</p>
+		</div>
+		</div>
+		
+		</div>
+		<div class="container">
+		<section>
+		<h1>Contact</h1>
+        <section-f id="contact">
+            <p class="log">
+				<a href="https://myportfolio.com" target="_blank">
+                    <img src="twitter.png" alt="Portfolio">
+                </a>
+			</p>
+            <p class="log">
+				<a href="https://myportfolio.com" target="_blank">
+                    <img src="linkedin-circle.svg" alt="Portfolio">
+                </a>
+			</p>
+			<p class="log">
+				<a href="https://myportfolio.com" target="_blank">
+                    <img src="github.svg" alt="Portfolio">
+                </a>
+			</p>
+			<p class="log">
+				<a href="https://www.youtube.com/watch?v=eUMBexwmc58" target="_blank">
+                    <img src="youtube.svg" alt="Portfolio">
+                </a>
+			</p>
+        </section-f>
+		</section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Shantanu. All rights reserved.</p>
+    </footer>
+</body>
+</html>
